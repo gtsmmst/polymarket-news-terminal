@@ -1,0 +1,29 @@
+# virtualenvs
+.venv/
+venv/
+env/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# runtime data
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

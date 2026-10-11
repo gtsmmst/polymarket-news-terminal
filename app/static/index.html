@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polymarket News Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <h1>Polymarket News Terminal</h1>
+  <div class="status" id="status">Loading...</div>
+</header>
+
+<section class="filters">
+  <label>
+    Search
+    <input type="text" id="search" placeholder="Iran, election, ceasefire..." />
+  </label>
+
+  <label>
+    Min Price (cents)
+    <input type="number" id="min-price" step="0.1" value="0.1" />
+  </label>
+
+  <label>
+    Max Price (cents)
+    <input type="number" id="max-price" step="0.1" value="20" />
+  </label>
+
+  <label>
+    Category
+    <select id="category">
+      <option value="politics_plus" selected>Politics + Geopolitics</option>
+      <option value="politics">Politics only</option>
+      <option value="geopolitics">Geopolitics only</option>
+      <option value="all">All categories</option>
+    </select>
+  </label>
+
+  <label>
+    Min Liquidity ($)
+    <input type="number" id="min-liquidity" step="100" value="0" />
+  </label>
+
+  <label>
+    Sort By
+    <select id="sort-by">
+      <option value="opportunity" selected>🔥 Opportunity</option>
+      <option value="liquidity">Liquidity</option>
+      <option value="volume">24h Volume</option>
+      <option value="price_asc">Yes Price ↑</option>
+      <option value="price_desc">Yes Price ↓</option>
+      <option value="newest">Newest</option>
+    </select>
+  </label>
+
+  <button id="apply-filters">Apply Filters</button>
+  <button id="refresh-markets">Refresh Markets</button>
+  <button id="refresh-all">⚡ Refresh News + Score</button>
+</section>
+
+<main class="layout">
+    <section class="panel">
+      <h2>Markets</h2>
+      <div id="markets-list" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Market Details</h2>
+      <div id="market-details" class="details">
+        <p>Select a market.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Headlines</h2>
+      <div id="headlines-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
