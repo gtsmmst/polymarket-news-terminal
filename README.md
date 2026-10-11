@@ -1,5 +1,7 @@
 # Polymarket News Terminal
 
+[![tests](https://github.com/gtsmmst/polymarket-news-terminal/actions/workflows/tests.yml/badge.svg)](https://github.com/gtsmmst/polymarket-news-terminal/actions/workflows/tests.yml)
+
 A small research terminal that watches world news and tries to spot Polymarket
 markets whose price has not caught up with the headlines yet. It pulls news
 from free sources (GDELT + public RSS), extracts named entities (countries,
